@@ -222,7 +222,7 @@ void showTitle(void)
     printf(CYAN "====================================================\n");
     printf("          HOSPITAL PATIENT MANAGEMENT SYSTEM\n");
     printf("                         MADE BY\n");
-    printf("             TANJIUL RAIHAN ****** S*** ***\n");
+    printf("             JIDAN RAIHAN TAHA ATIQUE SEHRI\n");
     printf("====================================================\n" RESET);
     showClock();
     printf(CYAN "====================================================\n" RESET);
