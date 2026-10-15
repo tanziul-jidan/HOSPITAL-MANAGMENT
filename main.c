@@ -117,7 +117,6 @@ static DWORD WINAPI liveClockWorker(LPVOID unused)
                 attrs[i] = FOREGROUND_GREEN | FOREGROUND_BLUE |
                            FOREGROUND_INTENSITY;
 
-            /* Direct console buffer write: does not move the input cursor. */
             WriteConsoleOutputCharacterA(out, line, 70, pos, &written);
             WriteConsoleOutputAttribute(out, attrs, 70, pos, &written);
         }
@@ -152,7 +151,6 @@ void showClock(void)
 {
     time_t now = time(NULL);
     struct tm *tmNow = localtime(&now);
-/* Keep the clock on the fixed row directly below the title. */
 #ifdef _WIN32
     liveClockRow = 5;
 #endif
